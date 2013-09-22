@@ -36,7 +36,8 @@ Vagrant::Config.run do |config|
         "#{ENV['IRC_PWD']} #{ENV['IRC_CHANNEL']} #{ENV['SMTP_USER']} " \
         "#{ENV['SMTP_PWD']} #{ENV['EMAIL_RCP']}; " \
       "#{CFG_PATH}/setup_credentials.sh #{USER} " \
-        "#{ENV['REGISTRY_USER']} #{ENV['REGISTRY_PWD']}; "
+        "#{ENV['REGISTRY_USER']} #{ENV['REGISTRY_PWD']} #{ENV['REGISTRY_BUCKET']} " \
+        "#{ENV['REGISTRY_ACCESS_KEY']} #{ENV['REGISTRY_SECRET_KEY']}; " \
 
     # Install docker
     pkg_cmd << "mkdir /mnt/docker; ln -s /mnt/docker /var/lib/docker; " \
